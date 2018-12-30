@@ -5,16 +5,23 @@
                 <h1 id="title" class="ui massive header">Bloom</h1>
             </div>
             <div class="item">
-                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                    <i class="inbox icon"></i>Inbox
-                </button>
+                <a href="/inbox">
+                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                        <i class="inbox icon"></i>Inbox
+                    </button>
+                </a>
                 <br>
-                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                    <i class="calendar alternate icon"></i>Today
-                </button>
-                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                    <i class="calendar icon"></i>Next 7 days
-                </button>
+                <a href="/today">
+                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                        <i class="calendar alternate icon"></i>Today
+                    </button>
+                </a>
+                <a href="next-7-days">
+                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                        <i class="calendar icon"></i>Next 7 days
+                    </button>
+                </a>
+
             </div>
             <div class="ui divider"></div>
             {{#ui-accordion as |execute|}}

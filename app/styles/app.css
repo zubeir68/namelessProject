@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
 
 #title {
     font-family: 'Righteous', cursive;
@@ -8,3 +9,13 @@
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
+#accordion {
+    border-radius: 6px;
+}
+body {
+    background-color:#f7f7f7;
+} 
+#sarabun {
+    font-family: 'Sarabun', sans-serif;
+}
+a { color: inherit; };

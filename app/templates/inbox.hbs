@@ -2,16 +2,37 @@
 <br>
 <br>
 {{#ui-search source=commonPasswords onSearchQuery=(action (mut query)) onSelect=(action (mut selected))}}
-  <input type="text" placeholder="Common passwords..." class="prompt">
+  <input type="text" id="sarabun" placeholder="Search task..." class="prompt">
   <div class="results"></div>
 {{/ui-search}}
 
 <br>
 <br>
-<br>
+
+<div id="poppins" class="ui animated blue fade button" style="border-radius: 160px;">
+  <div class="visible content">
+    <i class="plus icon"></i>Add Task
+  </div>
+  <div class="hidden content">
+    <i class="tasks icon"></i>
+  </div>
+</div>
+
 <br>
 <br>
 <br>
 
+{{#ui-accordion id="accordion" class="styled"}}
+   {{#each model as |task|}}
+     <div id="sarabun" class="title">
+       {{task.title}}
+     </div>
+     <div id="sarabun" class="content">
+       {{task.desription}}
+     </div>
+     <div class="ui divider"></div>
+
+   {{/each}}
+{{/ui-accordion}}
 
 {{outlet}}  
