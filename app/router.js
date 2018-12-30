@@ -7,9 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('inbox');
   this.route('today');
   this.route('next-7-days');
+  this.route('tasks');
 });
 
 export default Router;
