@@ -1,45 +1,52 @@
-<div id="menu" class="ui left fixed vertical large menu">
-    <div class="item">
-        <h1 id="title" class="ui massive header">Bloom</h1>
-    </div>
-    <div class="item">
-        <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-            <i class="inbox icon"></i>Inbox
-        </button>
-        <br>
-        <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-            <i class="calendar alternate icon"></i>Today
-        </button>
-        <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-            <i class="calendar icon"></i>Next 7 days
-        </button>
-    </div>
-    <div class="ui divider"></div>
-    {{#ui-accordion as |execute|}}
-    <div id="poppins" class="title">
-        <i class="dropdown icon"></i>
-        Projects
-    </div>
-    <div class="content">
+<div class="ui grid">
+    <div class="three wide column">
+        <div id="menu" class="ui left fixed vertical large menu">
+            <div class="item">
+                <h1 id="title" class="ui massive header">Bloom</h1>
+            </div>
+            <div class="item">
+                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                    <i class="inbox icon"></i>Inbox
+                </button>
+                <br>
+                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                    <i class="calendar alternate icon"></i>Today
+                </button>
+                <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
+                    <i class="calendar icon"></i>Next 7 days
+                </button>
+            </div>
+            <div class="ui divider"></div>
+            {{#ui-accordion as |execute|}}
+            <div id="poppins" class="title">
+                <i class="dropdown icon"></i>
+                Projects
+            </div>
+            <div class="content">
+
+            </div>
+            <div class="ui divider"></div>
+            <div id="poppins" class="title">
+                <i class="dropdown icon"></i>
+                Labels
+            </div>
+            <div class="content">
+            </div>
+            {{/ui-accordion}}
+            <div class="ui divider"></div>
+
+            <div class="ui fluid red animated fade button" style="border-radius:160px;">
+                <div id="poppins" class="visible content">
+                    <i class="plus icon"></i>Add Timer
+                </div>
+                <div class="hidden content">
+                    <i class="clock icon"></i>
+                </div>
+            </div>
+        </div>
 
     </div>
-    <div class="ui divider"></div>
-    <div id="poppins" class="title">
-        <i class="dropdown icon"></i>
-        Labels
-    </div>
-    <div class="content">
-    </div>
-    {{/ui-accordion}}
-    <div class="ui divider"></div>
-
-    <div class="ui fluid red animated fade button" style="border-radius:160px;">
-        <div id="poppins" class="visible content">
-            <i class="plus icon"></i>Add Timer
-        </div>
-        <div class="hidden content">
-            <i class="clock icon"></i>
-        </div>
+    <div class="thirteen wide column">
+        {{outlet}}
     </div>
 </div>
-{{outlet}}
