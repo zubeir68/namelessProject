@@ -5,3 +5,10 @@ export default Route.extend({
        return this.store.findAll('tasks');
     }
 });
+/**
+ * TODO:
+ * - ADD CONTROLLER AND PUT ACTIONS AND LIST FOR NOW UNTIL FIXED MIRAGE
+ * 
+ * 
+ * 
+ */
