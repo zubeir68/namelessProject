@@ -8,7 +8,4 @@ export default Route.extend({
 /**
  * TODO:
  * - ADD CONTROLLER AND PUT ACTIONS AND LIST FOR NOW UNTIL FIXED MIRAGE
- * 
- * 
- * 
  */

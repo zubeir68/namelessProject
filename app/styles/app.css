@@ -18,4 +18,14 @@ body {
 #sarabun {
     font-family: 'Sarabun', sans-serif;
 }
-a { color: inherit; };
+
+a { color: inherit; }
+
+#title-input {
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 100px;
+}
+#des-input {
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 20px;
+}

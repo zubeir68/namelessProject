@@ -1,38 +1,83 @@
-<br>
-<br>
-<br>
-{{#ui-search source=commonPasswords onSearchQuery=(action (mut query)) onSelect=(action (mut selected))}}
-  <input type="text" id="sarabun" placeholder="Search task..." class="prompt">
-  <div class="results"></div>
-{{/ui-search}}
+<div class="ui grid">
+  <div class="eight wide column">
+    <br>
+    <br>
+    <br>
+    {{#ui-search source=commonPasswords onSearchQuery=(action (mut query)) onSelect=(action (mut selected))}}
+    <input type="text" id="sarabun" placeholder="Search task..." class="prompt">
+    <div class="results"></div>
+    {{/ui-search}}
 
-<br>
-<br>
+    <br>
+    <br>
 
-<div id="poppins" class="ui animated blue fade button" style="border-radius: 160px;">
-  <div class="visible content">
-    <i class="plus icon"></i>Add Task
+    <div {{action (mut addTask) true}} id="poppins" class="ui animated blue fade button" style="border-radius: 160px;">
+      <div class="visible content">
+        <i class="plus icon"></i>Add Task
+      </div>
+      <div class="hidden content">
+        <i class="tasks icon"></i>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    {{#ui-accordion id="accordion" class="styled"}}
+    {{#each model as |task|}}
+    <div id="sarabun" class="title">
+      {{task.title}}
+    </div>
+    <div id="sarabun" class="content">
+      {{task.desription}}
+    </div>
+    <div class="ui divider"></div>
+
+    {{/each}}
+    {{/ui-accordion}}
   </div>
-  <div class="hidden content">
-    <i class="tasks icon"></i>
+  <div class="eight wide column">
+    {{#if addTask}}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="ui divider"></div>
+    <h1 id="sarabun" style="font-size:25px;">Title:</h1>
+    <div class="ui fluid input" style="margin-right: 40px;">
+      {{input value=title placeholder="New Task..." id="title-input"}}
+    </div>
+    <h2 id="sarabun" style="font-size: 25px;">Description:</h2>
+    <div class="ui form" style="margin-right: 40px;">
+      <div class="field">
+        {{textarea value=description placeholder="Description..." id="des-input"}}
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui circular blue animated fade button">
+      <div id="poppins" class="visible content">
+        Save
+      </div>
+      <div class="hidden content">
+        <i class="save icon"></i>
+      </div>
+    </div>
+    <div class="ui circular red animated fade button" {{action (mut addTask) false}}>
+      <div id="poppins" class="visible content">
+        Cancel
+      </div>
+      <div class="hidden content">
+        <i class="trash icon"></i>
+      </div>
+    </div>
+    {{/if}}
   </div>
 </div>
 
-<br>
-<br>
-<br>
-
-{{#ui-accordion id="accordion" class="styled"}}
-   {{#each model as |task|}}
-     <div id="sarabun" class="title">
-       {{task.title}}
-     </div>
-     <div id="sarabun" class="content">
-       {{task.desription}}
-     </div>
-     <div class="ui divider"></div>
-
-   {{/each}}
-{{/ui-accordion}}
-
-{{outlet}}  
+{{outlet}}
