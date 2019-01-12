@@ -30,8 +30,10 @@
                 Projects
             </div>
             <div class="content">
-                {{#each projects as |project|}}
-                    {{project}}
+                {{#each model.projects as |project|}}
+                    <div id="poppins" class="ui link list" style="margin-left:40px">
+                        <a class="item">{{project.title}}</a>
+                    </div>
                 {{/each}}
             </div>
             <div class="ui divider"></div>
@@ -40,8 +42,10 @@
                 Labels
             </div>
             <div class="content">
-                {{#each labels as |label|}}
-                    {{label}}
+                {{#each model.labels as |label|}}
+                    <div id="poppins" class="ui link list" style="margin-left:40px">
+                        <a class="item">{{label.title}}</a>
+                    </div>
                 {{/each}}
             </div>
             {{/ui-accordion}}

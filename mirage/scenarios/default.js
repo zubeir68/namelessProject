@@ -4,5 +4,7 @@ export default function(server) {
     Seed your development database using your factories.
     This data will not be loaded in your tests.
   */
-  server.loadFixtures('tasks');
+  server.createList('task', 10);
+  server.createList('label', 4);
+  server.createList('project', 4);
 } 

@@ -30,10 +30,18 @@
       {{task.title}}
     </div>
     <div id="sarabun" class="content">
-      {{task.desription}}
+      {{task.description}}
+      <div class="ui hidden divider">
+        <br>
+        <button class="ui red circular small button">
+          <i class="trash icon"></i>Delete
+        </button>
+        <button class="ui blue circular small button">
+          <i class="write icon"></i>Edit
+        </button>
+      </div>
+      <br>
     </div>
-    <div class="ui divider"></div>
-
     {{/each}}
     {{/ui-accordion}}
   </div>
