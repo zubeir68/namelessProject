@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'bloom',
+    modulePrefix: 'my-pendulum',
     environment,
     rootURL: '/',
     locationType: 'auto',
