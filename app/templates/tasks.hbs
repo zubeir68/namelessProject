@@ -33,7 +33,7 @@
       {{task.description}}
       <div class="ui hidden divider">
         <br>
-        <button class="ui red circular small button">
+        <button class="ui red circular small button" {{action "delete" task}}>
           <i class="trash icon"></i>Delete
         </button>
         <button class="ui blue circular small button">
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="ui divider"></div>
-    <div class="ui circular blue animated fade button">
+    <div class="ui circular blue animated fade button" {{action "save"}}>
       <div id="poppins" class="visible content">
         Save
       </div>
