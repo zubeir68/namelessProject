@@ -58,6 +58,34 @@
                     <i class="clock icon"></i>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <div class="ui fluid input">
+                {{input value=project placeholder="Add Project..." id="projectsInput"}}
+            </div>
+            <br>
+            <div class="ui circular small blue animated fade button" {{action "addProject" project}}>
+                <div class="visible content" style="font-family: 'Poppins', sans-serif; font-size: 12px;">
+                  <i class="plus icon"></i>Add Project
+                </div>
+                <div class="hidden content">
+                    <i class="briefcase icon"></i>
+                </div>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui fluid input">
+                {{input id="labelsInput" value=label placeholder="Add Label..." }}
+            </div>
+            <br>
+            <div class="ui circular small blue animated fade button" {{action "addLabel" label}}>
+                <div class="visible content" style="font-family: 'Poppins', sans-serif; font-size: 12px;">
+                  <i class="plus icon"></i>Add Label
+                </div>
+                <div class="hidden content">
+                    <i class="tags icon"></i>
+                </div>
+            </div>
         </div>
 
     </div>

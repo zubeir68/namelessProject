@@ -29,3 +29,12 @@ a { color: inherit; }
     font-family: 'Sarabun', sans-serif;
     border-radius: 20px;
 }
+
+#projectsInput {
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 160px;
+}
+#labelsInput {
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 160px;
+}

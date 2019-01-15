@@ -17,7 +17,4 @@ export default Route.extend({
     beforeModel: function() {
         this.transitionTo('tasks');
     }
-    // labels() {
-    //     return this.store.findAll('label');
-    // }
 });
