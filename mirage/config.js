@@ -24,6 +24,7 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.4.x/shorthands/
   */
   this.get('/tasks');
+  this.del('/tasks/:id');
   this.get('/labels');
-  this.get('/projects');
+  this.get('/projects'); 
 }
