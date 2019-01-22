@@ -1,81 +1,78 @@
 <div class="ui grid">
-    <div class="three wide column">
-        <div id="menu" class="ui left fixed vertical large menu">
-            <div class="item">
-                <a href="/">
-                    <h1 id="title" class="ui massive header">My Pendulum</h1>
-                </a>
-            </div>
-            <div class="item">
-                <a href="/tasks">
-                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                        <i class="inbox icon"></i>Inbox
-                    </button>
-                </a>
-                <br>
-                <a href="/today">
-                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                        <i class="calendar alternate icon"></i>Today
-                    </button>
-                </a>
-                <a href="next-7-days">
-                    <button id="poppins" class="ui button" style="background-color:transparent; margin-left:-10px">
-                        <i class="calendar icon"></i>Next 7 days
-                    </button>
-                </a>
-
-            </div>
-            <div class="ui divider"></div>
-            {{!-------------------------------Projects-----------------------------------------------------------}}
-            {{#ui-accordion as |execute|}}
-            <div id="poppins" class="title">
-                <i class="dropdown icon"></i>
-                Projects
-            </div>
-            <div class="content">
-                <div style="height: 120px;">
-                    {{#ember-scrollable autoHide=false}}
-                    {{#each model.labels as |label|}}
-                    <div id="poppins" class="ui link list" style="margin-left:40px">
-                        <a class="item">{{label.title}}</a>
-                    </div>
-                    {{/each}}
-                    {{/ember-scrollable}}
-                </div>
-
-            </div>
-            {{!-------------------------------Labels-----------------------------------------------------------}}
-            <div class="ui divider"></div>
-            <div id="poppins" class="title">
-                <i class="dropdown icon"></i>
-                Labels
-            </div>
-            <div class="content">
-                <div style="height: 120px;">
-                    {{#ember-scrollable autoHide=false}}
-                    {{#each model.labels as |label|}}
-                    <div id="poppins" class="ui link list" style="margin-left:40px">
-                        <a class="item">{{label.title}}</a>
-                    </div>
-                    {{/each}}
-                    {{/ember-scrollable}}
-                </div>
-
-            </div>
-            {{/ui-accordion}}
-            {{!------------------------------- Add Timer------------------------------------------------ --}}
-            <div class="ui divider"></div>
-            <div class="ui fluid red animated fade button" style="border-radius:160px;" {{action "addTimer"}}>
-                <div id="poppins" class="visible content">
-                    <i class="plus icon"></i>Add Timer
-                </div>
-                <div class="hidden content">
-                    <i class="clock icon"></i>
-                </div>
-            </div>
+  <div class="three wide column">
+    <div id="menu" class="ui left fixed vertical large menu">
+      <div class="item">
+        <a href="/">
+          <h1 id="title" class="ui massive header">My Pendulum</h1>
+        </a>
+      </div>
+      <div class="item">
+        <a href="/tasks">
+          <button id="poppins-menu" class="ui button">
+            <i class="inbox icon"></i>Inbox
+          </button>
+        </a>
+        <br>
+        <a href="/today">
+          <button id="poppins-menu" class="ui button">
+            <i class="calendar alternate icon"></i>Today
+          </button>
+        </a>
+        <a href="next-7-days">
+          <button id="poppins-menu" class="ui button">
+            <i class="calendar icon"></i>Next 7 days
+          </button>
+        </a>  
+      </div>
+      <div class="ui divider"></div>
+      {{!-------------------------------Projects-----------------------------------------------------------}}
+      {{#ui-accordion as |execute|}}
+        <div id="poppins" class="title">
+          <i class="dropdown icon"></i>
+          Projects
         </div>
+        <div class="content">
+          <div style="height: 120px;">
+            {{#ember-scrollable autoHide=false}}
+              {{#each model.labels as |label|}}
+                <div id="poppins-list" class="ui link list">
+                  <a class="item">{{label.title}}</a>
+                </div>
+              {{/each}}
+            {{/ember-scrollable}}
+          </div>  
+        </div>
+        {{!-------------------------------Labels-----------------------------------------------------------}}
+        <div class="ui divider"></div>
+        <div id="poppins" class="title">
+          <i class="dropdown icon"></i>
+          Labels
+        </div>
+        <div class="content">
+          <div style="height: 120px;">
+            {{#ember-scrollable autoHide=false}}
+              {{#each model.labels as |label|}}
+                <div id="poppins-list" class="ui link list">
+                  <a class="item">{{label.title}}</a>
+                </div>
+              {{/each}}
+            {{/ember-scrollable}}
+          </div>  
+        </div>
+      {{/ui-accordion}}
+      {{!------------------------------- Add Timer------------------------------------------------ --}}
+      <div class="ui divider"></div>
+      <div role="button" class="ui circular fluid red animated fade button" {{action "addTimer"}}>
+        <div id="poppins" class="visible content">
+          <i class="plus icon"></i>Add Timer
+        </div>
+        <div class="hidden content">
+          <i class="clock icon"></i>
+        </div>
+      </div>
     </div>
-    <div class="thirteen wide column">
-        {{outlet}}
-    </div>
+  </div>
+  <div class="thirteen wide column">
+    {{outlet}}
+  </div>
 </div>

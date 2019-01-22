@@ -38,3 +38,17 @@ a { color: inherit; }
     font-family: 'Sarabun', sans-serif;
     border-radius: 160px;
 }
+#sarabun-title {
+    font-family: 'Sarabun',sans-serif;
+    font-size: 25px;
+}
+#titleInput{
+    margin-right: 40px;
+}
+#poppins-menu{
+    background-color:transparent; 
+    margin-left:-10px;
+}
+#poppins-list{
+    margin-left: 40px;
+}

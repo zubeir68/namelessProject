@@ -4,14 +4,14 @@
     <br>
     <br>
     {{#ui-search source=commonPasswords onSearchQuery=(action (mut query)) onSelect=(action (mut selected))}}
-    <input type="text" id="sarabun" placeholder="Search task..." class="prompt">
-    <div class="results"></div>
+      <input type="text" id="sarabun" placeholder="Search task..." class="prompt">
+      <div class="results"></div>
     {{/ui-search}}
 
     <br>
     <br>
 
-    <div {{action (mut addTask) true}} id="poppins" class="ui animated blue fade button" style="border-radius: 160px;">
+    <div {{action (mut addTask) true}} id="poppins" role="button" class="ui circular animated blue fade button">
       <div class="visible content">
         <i class="plus icon"></i>Add Task
       </div>
@@ -25,64 +25,64 @@
     <br>
 
     {{#ui-accordion id="accordion" class="styled"}}
-    {{#each model as |task|}}
-    <div id="sarabun" class="title">
-      {{task.title}}
-    </div>
-    <div id="sarabun" class="content">
-      {{task.description}}
-      <div class="ui hidden divider">
-        <br>
-        <button class="ui red circular small button" {{action "delete" task}}>
-          <i class="trash icon"></i>Delete
-        </button>
-      </div>
-      <br>
-    </div>
-    {{/each}}
+      {{#each model as |task|}}
+        <div id="sarabun" class="title">
+          {{task.title}}
+        </div>
+        <div id="sarabun" class="content">
+          {{task.description}}
+          <div class="ui hidden divider">
+            <br>
+            <button class="ui red circular small button" {{action "delete" task}}>
+              <i class="trash icon"></i>Delete
+            </button>
+          </div>
+          <br>
+        </div>
+      {{/each}}
     {{/ui-accordion}}
   </div>
   <div class="eight wide column">
     {{#if addTask}}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="ui divider"></div>
-    <h1 id="sarabun" style="font-size:25px;">Title:</h1>
-    <div class="ui fluid input" style="margin-right: 40px;">
-      {{input value=title placeholder="New Task..." id="title-input"}}
-    </div>
-    <h2 id="sarabun" style="font-size: 25px;">Description:</h2>
-    <div class="ui form" style="margin-right: 40px;">
-      <div class="field">
-        {{textarea value=description placeholder="Description..." id="des-input"}}
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="ui divider"></div>
+      <h1 id="sarabun-title">Title:</h1>
+      <div id="titleInput" class="ui fluid input">
+        {{input value=title placeholder="New Task..." id="title-input"}}
       </div>
-    </div>
-    <div class="ui divider"></div>
-    <div class="ui circular blue animated fade button" {{action "save"}}>
-      <div id="poppins" class="visible content">
-        Save
+      <h2 id="sarabun-title">Description:</h2>
+      <div id="titleInput" class="ui form">
+        <div class="field">
+          {{textarea value=description placeholder="Description..." id="des-input"}}
+        </div>
       </div>
-      <div class="hidden content">
-        <i class="save icon"></i>
+      <div class="ui divider"></div>
+      <div role="button" class="ui circular blue animated fade button" {{action "save"}}>
+        <div id="poppins" class="visible content">
+          Save
+        </div>
+        <div class="hidden content">
+          <i class="save icon"></i>
+        </div>
       </div>
-    </div>
-    <div class="ui circular red animated fade button" {{action (mut addTask) false}}>
-      <div id="poppins" class="visible content">
-        Cancel
+      <div role="button" class="ui circular red animated fade button" {{action (mut addTask) false}}>
+        <div id="poppins" class="visible content">
+          Cancel
+        </div>
+        <div class="hidden content">
+          <i class="trash icon"></i>
+        </div>
       </div>
-      <div class="hidden content">
-        <i class="trash icon"></i>
-      </div>
-    </div>
     {{/if}}
   </div>
 </div>
